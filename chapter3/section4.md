@@ -1,2 +1,3 @@
 # 关于数据表示的几句话
 
+不用我们做任何事情，我们的DTO对象通过Spring神奇的转换为JSON格式。这得感谢Spring对Jackson数据绑定的支持。Jackson JSON处理器提供了一个将Java对象映射为JSON对象快速轻量的库。

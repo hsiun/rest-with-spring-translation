@@ -35,10 +35,10 @@ mvn jetty:start
 ```java
 import	org.springframework.web.bind.annotation.*;
 @RestController 
-public	class	HelloWorldResource	{
-	@RequestMapping(method	=	RequestMethod.GET)				
-	public	String	helloWorld(){								
-		return	"Hello,	world!";				
+public class HelloWorldResource	{
+	@RequestMapping(method = RequestMethod.GET)				
+	public String helloWorld(){								
+		return "Hello, world!";				
 	} 
 }
 ```
