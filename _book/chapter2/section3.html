@@ -1,0 +1,1755 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>我们简单Web服务的结构 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section3_1.html" />
+    
+    
+    <link rel="prev" href="section2_2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../title_page.html">
+            
+                <a href="../title_page.html">
+            
+                    
+                    使用Spring构建RESTful的Web服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../table_of_contents.html">
+            
+                <a href="../table_of_contents.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../title.html">
+            
+                <a href="../title.html">
+            
+                    
+                    标题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    使用Spring构建RESTful的Web服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../credits.html">
+            
+                <a href="../credits.html">
+            
+                    
+                    编者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../author.html">
+            
+                <a href="../author.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../reviewers.html">
+            
+                <a href="../reviewers.html">
+            
+                    
+                    关于审稿人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../press/">
+            
+                <a href="../press/">
+            
+                    
+                    www.PacktPub.com
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../press/section1.html">
+            
+                <a href="../press/section1.html">
+            
+                    
+                    支持文档，电子书，折扣信息和更多内容
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../press/section1_1.html">
+            
+                <a href="../press/section1_1.html">
+            
+                    
+                    为何订阅？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../press/section1_2.html">
+            
+                <a href="../press/section1_2.html">
+            
+                    
+                    免费访问Packt账号中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../preface/RREADME.html">
+            
+                <a href="../preface/RREADME.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../preface/section1.html">
+            
+                <a href="../preface/section1.html">
+            
+                    
+                    关于本书内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../preface/section2.html">
+            
+                <a href="../preface/section2.html">
+            
+                    
+                    阅读本书需要的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../preface/section3.html">
+            
+                <a href="../preface/section3.html">
+            
+                    
+                    本书是写给谁的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../preface/section4.html">
+            
+                <a href="../preface/section4.html">
+            
+                    
+                    排版约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../preface/section5.html">
+            
+                <a href="../preface/section5.html">
+            
+                    
+                    读者反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../preface/section6.html">
+            
+                <a href="../preface/section6.html">
+            
+                    
+                    客户支持
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.6.1" data-path="../preface/section6_1.html">
+            
+                <a href="../preface/section6_1.html">
+            
+                    
+                    下载示例代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6.2" data-path="../preface/section6_2.html">
+            
+                <a href="../preface/section6_2.html">
+            
+                    
+                    错误报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6.3" data-path="../preface/section6_3.html">
+            
+                <a href="../preface/section6_3.html">
+            
+                    
+                    盗版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6.4" data-path="../preface/section6_4.html">
+            
+                <a href="../preface/section6_4.html">
+            
+                    
+                    提问
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章 一些基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter1/section1.html">
+            
+                <a href="../chapter1/section1.html">
+            
+                    
+                    REST原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../chapter1/section1_1.html">
+            
+                <a href="../chapter1/section1_1.html">
+            
+                    
+                    统一接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../chapter1/section1_2.html">
+            
+                <a href="../chapter1/section1_2.html">
+            
+                    
+                    C/S架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../chapter1/section1_3.html">
+            
+                <a href="../chapter1/section1_3.html">
+            
+                    
+                    无状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../chapter1/section1_4.html">
+            
+                <a href="../chapter1/section1_4.html">
+            
+                    
+                    可缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../chapter1/section1_5.html">
+            
+                <a href="../chapter1/section1_5.html">
+            
+                    
+                    系统分层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../chapter1/section1_6.html">
+            
+                <a href="../chapter1/section1_6.html">
+            
+                    
+                    按需编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter1/section2.html">
+            
+                <a href="../chapter1/section2.html">
+            
+                    
+                    Spring框架和REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter1/section3.html">
+            
+                <a href="../chapter1/section3.html">
+            
+                    
+                    我们RESTful的Web服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../chapter1/section3_1.html">
+            
+                <a href="../chapter1/section3_1.html">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../chapter1/section3_2.html">
+            
+                <a href="../chapter1/section3_2.html">
+            
+                    
+                    数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter1/section4.html">
+            
+                <a href="../chapter1/section4.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章 使用Maven和Gradle构建RESTful的Web服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="section1.html">
+            
+                <a href="section1.html">
+            
+                    
+                    Apache Maven
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="section1_1.html">
+            
+                <a href="section1_1.html">
+            
+                    
+                    Apache Maven的依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="section2.html">
+            
+                <a href="section2.html">
+            
+                    
+                    Gradle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" data-path="section2_2.html">
+            
+                <a href="section2_2.html">
+            
+                    
+                    Gradle的依赖管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    我们简单Web服务的结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" data-path="section3_1.html">
+            
+                <a href="section3_1.html">
+            
+                    
+                    服务模块解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1.1" data-path="section3_1_1.html">
+            
+                <a href="section3_1_1.html">
+            
+                    
+                    本地服务调用VS远程服务调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    开发RESTful的Web服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.4.1" data-path="section4_1.html">
+            
+                <a href="section4_1.html">
+            
+                    
+                    使用你最喜欢的IDE开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.2" data-path="section4_2.html">
+            
+                <a href="section4_2.html">
+            
+                    
+                    让服务执行起来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.3" data-path="section4_3.html">
+            
+                <a href="section4_3.html">
+            
+                    
+                    使用Maven开始构建服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第三章 第一个端点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chapter3/section1.html">
+            
+                <a href="../chapter3/section1.html">
+            
+                    
+                    Inventory服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../chapter3/section2.html">
+            
+                <a href="../chapter3/section2.html">
+            
+                    
+                    REST和MVC模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="../chapter3/section2_1.html">
+            
+                <a href="../chapter3/section2_1.html">
+            
+                    
+                    请求映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.2" data-path="../chapter3/section2_2.html">
+            
+                <a href="../chapter3/section2_2.html">
+            
+                    
+                    路径映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.3" data-path="../chapter3/section2_3.html">
+            
+                <a href="../chapter3/section2_3.html">
+            
+                    
+                    HTTP请求映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.4" data-path="../chapter3/section2_4.html">
+            
+                <a href="../chapter3/section2_4.html">
+            
+                    
+                    请求参数映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../chapter3/section3.html">
+            
+                <a href="../chapter3/section3.html">
+            
+                    
+                    运行服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../chapter3/section4.html">
+            
+                <a href="../chapter3/section4.html">
+            
+                    
+                    关于数据表示的几句话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../chapter3/section5.html">
+            
+                <a href="../chapter3/section5.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第四章 数据表示
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../chapter4/section1.html">
+            
+                <a href="../chapter4/section1.html">
+            
+                    
+                    数据转换对象设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../chapter4/section2.html">
+            
+                <a href="../chapter4/section2.html">
+            
+                    
+                    API响应格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1" data-path="../chapter4/section2_1.html">
+            
+                <a href="../chapter4/section2_1.html">
+            
+                    
+                    封装格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1.1" data-path="../chapter4/section2_1_1.html">
+            
+                <a href="../chapter4/section2_1_1.html">
+            
+                    
+                    错误管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.1.2" data-path="../chapter4/section2_1_2.html">
+            
+                <a href="../chapter4/section2_1_2.html">
+            
+                    
+                    分页支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.2" data-path="../chapter4/section2_2.html">
+            
+                <a href="../chapter4/section2_2.html">
+            
+                    
+                    定制JSON响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../chapter4/section3.html">
+            
+                <a href="../chapter4/section3.html">
+            
+                    
+                    API演化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.3.1" data-path="../chapter4/section3_1.html">
+            
+                <a href="../chapter4/section3_1.html">
+            
+                    
+                    HATEOAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3.2" data-path="../chapter4/section3_2.html">
+            
+                <a href="../chapter4/section3_2.html">
+            
+                    
+                    版本策略
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.3.2.1" data-path="../chapter4/section3_2_1.html">
+            
+                <a href="../chapter4/section3_2_1.html">
+            
+                    
+                    URI版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3.2.2" data-path="../chapter4/section3_2_2.html">
+            
+                <a href="../chapter4/section3_2_2.html">
+            
+                    
+                    展示版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3.2.3" data-path="../chapter4/section3_2_3.html">
+            
+                <a href="../chapter4/section3_2_3.html">
+            
+                    
+                    其他方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../chapter4/section4.html">
+            
+                <a href="../chapter4/section4.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第五章 REST中CRUD操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../chapter5/section1.html">
+            
+                <a href="../chapter5/section1.html">
+            
+                    
+                    映射CRUD操作到HTTP方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../chapter5/section2.html">
+            
+                <a href="../chapter5/section2.html">
+            
+                    
+                    创建资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.2.1" data-path="../chapter5/section2_1.html">
+            
+                <a href="../chapter5/section2_1.html">
+            
+                    
+                    快速测试端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.2" data-path="../chapter5/section2_2.html">
+            
+                <a href="../chapter5/section2_2.html">
+            
+                    
+                    JSON VS 表单数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../chapter5/section3.html">
+            
+                <a href="../chapter5/section3.html">
+            
+                    
+                    更新资源
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.3.1" data-path="../chapter5/section3_1.html">
+            
+                <a href="../chapter5/section3_1.html">
+            
+                    
+                    更新端点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3.2" data-path="../chapter5/section3_2.html">
+            
+                <a href="../chapter5/section3_2.html">
+            
+                    
+                    测试更新请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../chapter5/section4.html">
+            
+                <a href="../chapter5/section4.html">
+            
+                    
+                    删除资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../chapter5/section5.html">
+            
+                <a href="../chapter5/section5.html">
+            
+                    
+                    重写HTTP方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../chapter5/section6.html">
+            
+                <a href="../chapter5/section6.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    第六章 性能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../chapter6/section1.html">
+            
+                <a href="../chapter6/section1.html">
+            
+                    
+                    HTTP压缩
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" data-path="../chapter6/section1_1.html">
+            
+                <a href="../chapter6/section1_1.html">
+            
+                    
+                    内容格式协商
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.2" data-path="../chapter6/section1_2.html">
+            
+                <a href="../chapter6/section1_2.html">
+            
+                    
+                    gzip或者deflate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.1.3" data-path="../chapter6/section1_3.html">
+            
+                <a href="../chapter6/section1_3.html">
+            
+                    
+                    RESTful Web服务中的gzip压缩
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.3.1" data-path="../chapter6/section1_3_1.html">
+            
+                <a href="../chapter6/section1_3_1.html">
+            
+                    
+                    Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../chapter6/section2.html">
+            
+                <a href="../chapter6/section2.html">
+            
+                    
+                    HTTP缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" data-path="../chapter6/section2_1.html">
+            
+                <a href="../chapter6/section2_1.html">
+            
+                    
+                    Cache-Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1.1" data-path="../chapter6/section2_1_1.html">
+            
+                <a href="../chapter6/section2_1_1.html">
+            
+                    
+                    Private/Public 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.1.2" data-path="../chapter6/section2_1_2.html">
+            
+                <a href="../chapter6/section2_1_2.html">
+            
+                    
+                    No 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.1.3" data-path="../chapter6/section2_1_3.html">
+            
+                <a href="../chapter6/section2_1_3.html">
+            
+                    
+                    ETags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.1.4" data-path="../chapter6/section2_1_4.html">
+            
+                <a href="../chapter6/section2_1_4.html">
+            
+                    
+                    Last-Modified/If-Modified-Since头部
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../chapter6/section3.html">
+            
+                <a href="../chapter6/section3.html">
+            
+                    
+                    客房availability服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.3.1" data-path="../chapter6/section3_1.html">
+            
+                <a href="../chapter6/section3_1.html">
+            
+                    
+                    实现概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.2" data-path="../chapter6/section3_2.html">
+            
+                <a href="../chapter6/section3_2.html">
+            
+                    
+                    REST资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.3" data-path="../chapter6/section3_3.html">
+            
+                <a href="../chapter6/section3_3.html">
+            
+                    
+                    添加HTTP缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.4" data-path="../chapter6/section3_4.html">
+            
+                <a href="../chapter6/section3_4.html">
+            
+                    
+                    通过Etag缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../chapter6/section4.html">
+            
+                <a href="../chapter6/section4.html">
+            
+                    
+                    本章小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >我们简单Web服务的结构</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6211;&#x4EEC;&#x7B80;&#x5355;web&#x670D;&#x52A1;&#x7684;&#x7ED3;&#x6784;">&#x6211;&#x4EEC;&#x7B80;&#x5355;Web&#x670D;&#x52A1;&#x7684;&#x7ED3;&#x6784;</h1><p>&#x5728;&#x7B2C;&#x4E00;&#x7AE0;&#xFF0C;<em>&#x51E0;&#x4E2A;&#x57FA;&#x7840;&#x4E2D;</em>&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x5206;&#x6210;&#x56DB;&#x90E8;&#x5206;&#xFF1A;</p><ul><li>Inventory&#x670D;&#x52A1;
+</li>
+<li>Availability&#x670D;&#x52A1;
+</li>
+<li>Booking&#x670D;&#x52A1;
+</li>
+<li>Billing&#x670D;&#x52A1;
+</li></ul>
+<p>&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x9879;&#x76EE;&#x7684;&#x529E;&#x6CD5;&#x662F;&#xFF0C;&#x628A;&#x5B83;&#x4EEC;&#x4F5C;&#x4E3A;&#x4F5C;&#x4E3A;&#x5355;&#x4E00;&#x6A21;&#x5757;&#xFF0C;&#x5E76;&#x4E14;&#x56DB;&#x4E2A;&#x670D;&#x52A1;&#x5728;&#x4E00;&#x8D77;&#x7F16;&#x7801;&#x3002;
+&#x867D;&#x7136;&#x8FD9;&#x6837;&#x4F7F;&#x5F97;&#x914D;&#x7F6E;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E5F;&#x5BFC;&#x81F4;&#x4E86;&#x5355;&#x72EC;&#x90E8;&#x7F72;&#x6574;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x963B;&#x788D;&#xFF0C;&#x5904;&#x4E8E;&#x5BF9;&#x6269;&#x5C55;&#x6027;&#x8981;&#x6C42;&#x7684;&#x8003;&#x8651;&#xFF08;&#x53C2;&#x89C1;&#x7B2C;10&#x7AE0;<em>&#x6269;&#x5C55;RESTful Web&#x670D;&#x52A1;</em>&#xFF0C;&#x5C06;&#x8BA8;&#x8BBA;&#x6269;&#x5C55;&#x6027;&#xFF09;&#x3002;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x628A;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x7EC4;&#x7EC7;&#x6210;&#x5355;&#x72EC;&#x7684;&#x6A21;&#x5757;&#x3002;</p><p>&#x672C;&#x4E66;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x91CD;&#x70B9;&#x5728;&#x4E8E;Maven&#x3002;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x5C06;&#x7531;&#x516D;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;Maven&#x6A21;&#x5757;&#x7EC4;&#x6210;&#xFF1A;</p><ul><li>common&#xFF1A;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x5305;&#x542B;&#x516C;&#x5171;&#x4EE3;&#x7801;&#x548C;&#x5C06;&#x4F1A;&#x7528;&#x5230;&#x7684;Hibernate&#x8BBE;&#x7F6E;
+</li>
+<li>inventory&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;inventory&#x670D;&#x52A1;&#x7684;&#x5B9E;&#x73B0;
+</li>
+<li>availability&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;availability&#x670D;&#x52A1;&#x7684;&#x5B9E;&#x73B0;
+</li>
+<li>booking&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;booking&#x670D;&#x52A1;&#x7684;&#x5B9E;&#x73B0;
+</li>
+<li>billing&#xFF1A;&#x8FD9;&#x4E2A;&#x662F;billing&#x670D;&#x52A1;&#x7684;&#x5B9E;&#x73B0;
+</li>
+<li>all&#xFF1A;&#x51FA;&#x4E8E;&#x5F00;&#x53D1;&#x548C;&#x5355;&#x72EC;&#x90E8;&#x7F72;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x5C06;&#x88AB;&#x7EC4;&#x7EC7;&#x4E3A;&#x4F7F;&#x7528;&#x56DB;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x5355;&#x72EC;&#x7684;Web&#x5E94;&#x7528;
+</li></ul>
+<h3 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h3><p>&#x5173;&#x4E8E;&#x4F7F;&#x7528;Maven&#x6A21;&#x5757;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5728;<a href="https://maven.apache.org/guides/mini/guide-multiple-modules.html" target="_blank">https://maven.apache.org/guides/mini/guide-multiple-modules.html</a>&#x627E;&#x5230;&#x6587;&#x6863;&#x53C2;&#x8003;&#x3002;</p><p>&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x7684;&#x7236;POM&#x770B;&#x8D77;&#x6765;&#x5C06;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p><pre><code>&lt;project... //&#x51FA;&#x4E8E;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x76EE;&#x7684;&#x7701;&#x7565;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.packtpub.rest-with-spring&lt;/groupId&gt;
+    &lt;artifactId&gt;rest-with-spring&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+
+    &lt;modules&gt;
+        &lt;module&gt;common&lt;/module&gt;
+        &lt;module&gt;inventory&lt;/module&gt;
+        &lt;module&gt;availability&lt;/module&gt;
+        &lt;module&gt;booking&lt;/module&gt;
+        &lt;module&gt;billing&lt;/module&gt;
+        &lt;module&gt;all&lt;/module&gt;
+    &lt;/modules&gt;
+
+&lt;/project&gt;</code></pre>
+<p>&#x6B63;&#x5982;&#x524D;&#x9762;&#x5217;&#x51FA;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x6A21;&#x5757;&#x58F0;&#x660E;&#x5728;&#x9876;&#x7EA7;pom.xml&#x4E2D;&#x3002;common&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;JAR&#x6A21;&#x5757;&#xFF0C;&#x800C;inventory&#xFF0C;availability&#xFF0C;booking&#xFF0C;billing&#xFF0C;&#x548C;all&#x90FD;&#x662F;&#x58F0;&#x660E;&#x4E3A;WAR&#x6A21;&#x5757;&#x3002;</p><h3 id="&#x6280;&#x5DE7;">&#x6280;&#x5DE7;</h3><p>&#x5B8C;&#x6574;&#x7684;Maven&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x4E3A;TODO&#x3002;&#xFF08;&#x4E0D;&#x5927;&#x660E;&#x767D;TODO&#x662F;&#x5565;&#xFF0C;&#x540E;&#x9762;Google&#x5427;&#xFF09;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="section2_2.html" class="navigation navigation-prev " aria-label="Previous page: Gradle的依赖管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section3_1.html" class="navigation navigation-next " aria-label="Next page: 服务模块解析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"我们简单Web服务的结构","level":"1.12.3","depth":2,"next":{"title":"服务模块解析","level":"1.12.3.1","depth":3,"path":"chapter2/section3_1.md","ref":"chapter2/section3_1.md","articles":[{"title":"本地服务调用VS远程服务调用","level":"1.12.3.1.1","depth":4,"path":"chapter2/section3_1_1.md","ref":"chapter2/section3_1_1.md","articles":[]}]},"previous":{"title":"Gradle的依赖管理","level":"1.12.2.1","depth":3,"path":"chapter2/section2_2.md","ref":"chapter2/section2_2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section3.md","mtime":"2016-10-12T12:06:02.340Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-20T01:18:15.634Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

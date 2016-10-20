@@ -1,0 +1,3 @@
+# gzip或者deflate
+
+其他的压缩算法也可以被HTTP使用，但是gzip和deflate是最常用的。因此，问题是服务的设计中更偏爱哪个？不幸的是，在HTTP规范的命名上是有一些冲突的。Deflate和gzip实际上使用的是相同的压缩算法。gzip是一个数据格式，使用deflate（算法）压缩的结果。在HTTP正文中，deflate定义为zlib，是其他一种使用deflate的数据格式。在技术术语上，deflate模式提供更好的性能，但是它比gzip支持的范围给小。因此，gzip是HTTP压缩更普遍的选择。
