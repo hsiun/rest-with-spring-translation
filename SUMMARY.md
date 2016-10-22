@@ -151,7 +151,7 @@
     * [本章小结](chapter9/section5.md)
 * [第十章 扩展RESTful Web服务](chapter10/README.md)
     * [集群](chapter10/section1.md)
-        * [横向扩展VS水平扩展](chapter10/section1_1.md)
+        * [水平扩展VS垂直扩展](chapter10/section1_1.md)
         * [系统集群的好处](chapter10/section1_2.md)
         * [负载均衡](chapter10/section1_3.md)
         * [线性扩展](chapter10/section1_4.md)
