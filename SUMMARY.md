@@ -1,10 +1,8 @@
 # Summary
 
 * [封面](README.md)
-* [副标](title_page.md)
-* [目录](table_of_contents.md)
-* [标题](title.md)
-* [使用Spring构建RESTful的Web服务](about.md)
+* [使用Spring构建RESTful的Web服务](title_page.md)
+* [版权声明](about.md)
 * [编者](credits.md)
 * [关于作者](author.md)
 * [关于审稿人](reviewers.md)
