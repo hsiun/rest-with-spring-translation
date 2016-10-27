@@ -1,6 +1,6 @@
 # HTTP请求映射
 
-将特定的HTTP方法映射到类或是Java方法是可行的。我们的`RoomsResource`类暴露一个通过ID检索房间的方法。它的声明如下所示：
+将特定的HTTP方法映射到类或是Java方法是可行的。我们的`RoomsResource`类发布一个通过ID检索房间的方法。它的声明如下所示：
 ```
 @RequestMapping(value = "/{roomId}", method = RequestMethod.GET)
 ```

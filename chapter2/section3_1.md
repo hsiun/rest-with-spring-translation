@@ -32,7 +32,7 @@
 </project>
 ```
 
-插件的作用是将构建WAR文件的Java代码作为单独的artifact，这样就可以到处引用他了。下面的代码片段展示了如何应用这个artifact：
+插件的作用是将构建WAR文件的Java代码作为单独的artifact，这样就可以到处引用他了。下面的代码片段展示了如何引用这个artifact：
 ```
 <dependency>
 	<groupId>com.packtpub.rest-with-spring</groupId>

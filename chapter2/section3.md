@@ -46,4 +46,4 @@
 正如前面列出的，我们的模块声明在顶级pom.xml中。common模块是一个简单的JAR模块，而inventory，availability，booking，billing，和all都是声明为WAR模块。
 
 ### 技巧
-完整的Maven设置可以下载为TODO。（不大明白TODO是啥，后面Google吧）
+完整的Maven设置可以下载** TODO **。

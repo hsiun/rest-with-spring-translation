@@ -1,6 +1,6 @@
 # 运行服务
 
-建立在第二章，_通过Maven和Gradle构建一个RESTful的Web服务_的基础上，我们可以通过使用Spring Boot快速的启动，运行我们的服务。出于这个目标，我们需要创建一个主类，如下所示：
+建立在第二章，_通过Maven和Gradle构建一个RESTful的Web服务_的基础上，我们可以通过使用Spring Boot快速的启动，运行我们的服务。出于此目的，我们需要创建一个主类，如下所示：
 
 ```Java
 package com.packtpub.springrest.inventory; 
@@ -14,7 +14,7 @@ public class WebApplication	{
 }
 ```
 
-在你最拿手的IDE中运行这个类将启动一个内嵌的Tomcat实例，并且暴露你的资源。服务将可以通过<http://localhost:8080>访问。作为示例，访问<http://localhost:8080/rooms/1>将返回下面内容：
+在你最拿手的IDE中运行这个类将启动一个内嵌的Tomcat实例，并且发布你的资源。服务将可以通过<http://localhost:8080>访问。作为示例，访问<http://localhost:8080/rooms/1>将返回下面内容：
 ```
 {
 	"id": 1,

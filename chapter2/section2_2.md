@@ -25,7 +25,7 @@ dependencies {
 
 ### 技巧
 #### 下载示例代码
-你可以通过你的账号在<http://www.packtpub.com>下载所有购买的Packt出版图书的代码。无论你在哪里购买的本书，你都可以访问<http://www.packtpub.com/support>，包好文件下载地址的电子邮件将直接发给你。
+你可以通过你的账号在<http://www.packtpub.com>下载所有购买的Packt出版图书的代码。无论你在哪里购买的本书，你都可以访问<http://www.packtpub.com/support>，包含文件下载地址的电子邮件将直接发给你。
 
 ### 技巧
 添加下面内容到构建文件，就可以使用远程Maven仓库了：
