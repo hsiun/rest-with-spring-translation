@@ -3,7 +3,11 @@
 除了上面描述的两种方法之外，应该考虑使用一种其他解决方案。举个例子，一个专用的报文头，如当API版本被使用的时候，`X-API-Version`应该做特定的用途。下面的代码将在我们第三版的API中处理请求来获取房间：
 
 ```
-@RequestMapping(value	=	"/{roomId}",	method	=	RequestMethod.GET,	headers	=	{"X-API-Version=3"}) public	RoomDTOv3	getRoomV3(@PathVariable("roomId")	long	id)	{		Room	room	=	inventoryService.getRoom(id);		return	new	RoomDTOv3(room); }
+@RequestMapping(value = "/{roomId}", method = RequestMethod.GET, headers = {"X-API-Version=3"}) 
+public RoomDTOv3 getRoomV3(@PathVariable("roomId") long id) {  
+	Room room = inventoryService.getRoom(id);  
+	return new RoomDTOv3(room); 
+}
 ```
 
 在这个示例中，我们指示Spring将包含报文头`X-API-Version`值为3，对`/rooms/{roomId}`的请求映射到这个方法。

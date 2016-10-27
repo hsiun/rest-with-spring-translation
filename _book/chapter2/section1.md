@@ -1,13 +1,13 @@
 # Apache Maven
 
-Maven是一个开源的项目管理工具。它在简化基于Ant的项目构建下诞生，并且配置文件的转换也很方便。在很多协助团队中，它对典型的工作流提供了额外的支持，如构建Java Web应用，提供一个共同遵守的公约。然而，Maven对定制构建过程支持不是很好，这种设计的指责成为了不选择Maven的主要原因。
+Maven是一个开源的项目管理工具。它在简化基于Ant项目构建的需求下诞生，并且配置文件的转换也很方便。在很多实际情况中，它对典型的工作流提供了额外的支持，如为构建Java Web应用，提供共同遵守的公约。然而，Maven对定制构建过程支持不是很友好，对这种设计的指责成为了不选择Maven的主要原因。
 
 ### 注意 ###
 关于Maven的更多信息可以在<https://maven.apache.org>找到。
 
-尽管Maven提供了很多特性，但它们都属于本章的范围。我们将专注它对构建Java Web应用的支持。
+虽然Maven提供了很多特性，但它们都属于本章的范围。我们将专注它对构建Java Web应用的支持。
 
-下面的**POM(Project Object Model)**文件展示了Maven（在一个叫做pom.xml的文件中）如何声明一个项目的。
+下面的**POM(Project Object Model)**文件展示了Maven（在一个叫做pom.xml的文件中）如何声明一个项目。
 
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -24,7 +24,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 </project>
 ```
 
-这个pom.xml文件通过gav（groupId，artifactID，version）定义了一个项目，他也申明应用的结果将会被打包（为一个war文件，在当前情况中）。
+这个pom.xml文件通过gav（groupId，artifactID，version）定义了一个项目，他也申明应用的结果将会被打包（为一个war文件，在当前情况）。
 
 ### 技巧 ###
 Maven的artifacts属于一个组（典型的如`com.company.application`），并且必需要有一个唯一的标识（一般是应用名字）。

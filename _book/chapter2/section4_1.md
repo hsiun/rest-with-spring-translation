@@ -1,6 +1,6 @@
 # 使用你最喜欢的IDE开发
 
-Maven和Gradle都是支持广泛的工具，并且已经集成到大多数的开发环境或IDE中了，这里提供一种导入这个项目的方式。举个例子，对于**IntelliJ IDEA**，我们简单Web服务可以通过选项**File | Open**导入。一旦导入，这个项目看起来如下所示：
+Maven和Gradle都是支持广泛的工具，并且已经集成到大多数的开发环境或IDE中了，这里提供一种导入这个项目的方式。例如，对于**IntelliJ IDEA**，我们简单Web服务可以通过选项**File | Open**导入。一旦导入，这个项目看起来如下所示：
 
 ![IDE](http://ofboy2upv.bkt.clouddn.com/IDE.PNG)
 

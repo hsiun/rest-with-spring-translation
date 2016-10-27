@@ -31,7 +31,7 @@ if (request.checkNotModified(lastUpdatedBooking.getTime())) {
 // perform the query and return the availability status
 ```
 
-对于`WebRequest.checkNotModified()`的使用，我们比较`If-Modified-Since `请求头部的值和我们计算的值。如果这个值相匹配，我们不需要处理这个请求，且Spring将会返回一个304响应。另外，我们可以执行并处理Availability请求，并且包括我们生成的`Last-Modified`报文头。
+对于`WebRequest.checkNotModified()`的使用，我们用来比较`If-Modified-Since`请求头部的值和我们计算的值。如果这个值相匹配，我们不需要处理这个请求，且Spring将会返回一个304响应。另外，我们可以执行并处理Availability请求，并且包括我们生成的`Last-Modified`报文头。
 
 ### 注意
 

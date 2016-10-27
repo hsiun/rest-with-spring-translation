@@ -1,6 +1,6 @@
 # Java Bean注解
 
-为了实现输入验证，我峨嵋你可以使用在JavaEE6中引入的Java Bean验证注解。为了展示他们的用法，让我们一起实现在我们简单Web服务中查询订单的端点。我们订单服务接受下格式Java类的请求：
+为了实现输入验证，我可以使用在JavaEE6中引入的Java Bean验证注解。为了展示他们的用法，让我们一起实现在我们简单Web服务中查询订单的端点。我们订单服务接受下格式Java类的请求：
 
 ```
 public class BookingRequest {

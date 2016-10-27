@@ -2,7 +2,7 @@
 
 当产生的最后修改日期是不合适的时候，ETags可以用来作为替代。Spring以过滤器的形式对ETags提供透明支持，过滤器可以添加到REST servlet上。这个过滤器自动对响应生成一个MD5的哈希值。
 
-过滤器可以添加在Web应用描述器中（web.xml）：
+过滤器可以添加在Web应用描述器（web.xml）中：
 
 ```xml
 <filter>		

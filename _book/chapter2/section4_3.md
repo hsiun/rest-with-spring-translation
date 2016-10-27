@@ -23,7 +23,7 @@
 	</plugins> 
 </build>
 ```
-当这个插件被添加到POM文件中后，现在可以通过运行下面的命令启动服务了：
+当这个插件被添加到POM文件中后，可以通过运行下面的命令启动服务了：
 
 ```
 mvn jetty:start
@@ -31,7 +31,7 @@ mvn jetty:start
 
 之后服务可以通过http://localhost:8080 访问。
 
-注意这一点，当服务处于运行中时，这个应用不会暴露出任何的端点，下一章我们将学校如何创建一个RESTful端点，但是现在，开发者可以创建下满的控制器用于快熟测试本服务：
+注意这一点，当服务处于运行中时，这个应用不会发布任何的端点，下一章我们将学习如何创建一个RESTful端点，但是现在，开发者可以创建下面的控制器用于快速测试本服务：
 ```java
 import	org.springframework.web.bind.annotation.*;
 @RestController 

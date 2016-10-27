@@ -14,10 +14,10 @@ public class RoomsResource {
 } 
 ```
 
-我们添加了一个新的方法到我们RoomsResource类，这个方法用来处理创建新的房间。正如第三章中描述的，@RequestMapping用来将请求映射到Java方法。这里，我们映射POST请求到addRoom()函数。
+我们添加了一个新的方法到我们RoomsResource类，这个方法用来处理创建新的房间。正如第三章中描述的，`@RequestMapping`用来将请求映射到Java方法。这里，我们映射POST请求到addRoom()函数。
 
 ### 技巧
-@RequestMapping没有指明路径值的话，等价于使用"/"。我们对传入的新房间使用@RequestBody注解。这个注解指示Spring将进入的web请求体映射到方法参数。Jackson在这里被用于转换JSON请求体到Java对象。
+@RequestMapping没有指明路径值的话，等价于使用"/"。我们对传入的新房间使用`@RequestBody`注解。这个注解指示Spring将进入的web请求体映射到方法参数。Jackson在这里被用于转换JSON请求体到Java对象。
 
 关于我们的新方法，使用下面JSON体POST请求<http://localhoost:8080/rooms>的结果是将创建一间新的房间。
 ```
@@ -28,7 +28,7 @@ public class RoomsResource {
 }
 ```
 
-我们新的方法将放缓这个新建的房间：
+我们新的方法将返回这个新建的房间：
 
 ```
 {		
@@ -42,4 +42,4 @@ public class RoomsResource {
 }
 ```
 
-我们可以（只返回新资源的ID）在响应创建资源的时候。然而，因为我们也许头脑清醒或者另外操作数据发送，返回全部资源是一个好的方法。
+我们可以（只返回新资源的ID）在响应创建资源的时候。然而，因为我们也许头脑清醒或者另外操作数据发送，返回全部资源是一个最佳实践。
