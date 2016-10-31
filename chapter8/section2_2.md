@@ -1,6 +1,6 @@
 # 使用mocking库实现stubbing
 
-当提到Java中mocking库的时候有好几个选项。如JMock（http://www.jmock.org）或者是EasyMock（http://easymock.org）。** Mockito **是其中最流行的之一。Mockito是一个mocking框架，它让开发者写出很纯粹的测试并提供了简单API。开发者可以通过加入下面的依赖到它们项目描述器中来添加Mockito到它们的Maven项目中。
+当提到Java中mocking库的时候有好几个选项。如JMock（<http://www.jmock.org>）或者是EasyMock（http://easymock.org）。**Mockito**是其中最流行的之一。Mockito是一个mocking框架，它让开发者写出很纯粹的测试并提供了简单API。开发者可以通过加入下面的依赖到它们项目描述器中来添加Mockito到它们的Maven项目中。
 
 ```xml
 <dependency>  
