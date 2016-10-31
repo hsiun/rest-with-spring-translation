@@ -2526,23 +2526,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x9A8C;&#x8BC1;&#x8BA2;&#x5355;">&#x9A8C;&#x8BC1;&#x8BA2;&#x5355;</h1><p>&#x6211;&#x4EEC;&#x7684;``&#x7C7B;&#x5E94;&#x8BE5;&#x5148;&#x9A8C;&#x8BC1;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x7684;&#x8BA2;&#x5355;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6765;&#x5904;&#x7406;&#x4ED6;&#x4EEC;&#x3002;&#x4E00;&#x8D77;&#x6765;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x7684;&#x7AEF;&#x70B9;&#xFF1A;</p><pre><code>@RestController @RequestMapping(&quot;/bookings&quot;) 
-public class BookingsResource {  
-    @RequestMapping(method = RequestMethod.POST)  
-    public ApiResponse book(@Valid @RequestBody BookingRequest request) {    
+                                <h1 id="&#x9A8C;&#x8BC1;&#x8BA2;&#x5355;">&#x9A8C;&#x8BC1;&#x8BA2;&#x5355;</h1><p>&#x6211;&#x4EEC;&#x7684;``&#x7C7B;&#x5E94;&#x8BE5;&#x5148;&#x9A8C;&#x8BC1;&#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x7684;&#x8BA2;&#x5355;&#x8BF7;&#x6C42;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6765;&#x5904;&#x7406;&#x4ED6;&#x4EEC;&#x3002;&#x4E00;&#x8D77;&#x6765;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x7684;&#x7AEF;&#x70B9;&#xFF1A;</p><pre><code class="lang-java"><span class="hljs-meta">@RestController</span> <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/bookings&quot;</span>) 
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BookingsResource</span> </span>{  
+    <span class="hljs-meta">@RequestMapping</span>(method = RequestMethod.POST)  
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ApiResponse <span class="hljs-title">book</span><span class="hljs-params">(@Valid @RequestBody BookingRequest request)</span> </span>{    
         BookingResponse response = bookingService.book(request);    
-        return new ApiResponse(Status.OK, response);  
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ApiResponse(Status.OK, response);  
     } 
 }</code></pre>
-<p>&#x5F53;POST&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;<code>/bookings/</code>&#x65F6;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x6DFB;&#x52A0;<code>@Valid</code>&#x6CE8;&#x89E3;&#x5230;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;Spring&#x5C06;&#x4F1A;&#x4FDD;&#x8BC1;&#x8FDB;&#x5165;&#x7684;&#x8BA2;&#x5355;&#x8BF7;&#x6C42;&#x9996;&#x5148;&#x4F1A;&#x8FD0;&#x884C;&#x901A;&#x8FC7;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;&#x9A8C;&#x8BC1;&#x89C4;&#x5219;&#x3002;</p><p>&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528;Postman&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x5982;&#x4E0B;&#x6240;&#x793A;POST&#x8BF7;&#x6C42;&#xFF1A;</p><pre><code>{  
-    &quot;roomId&quot;:1,  
-    &quot;dateRange&quot;: {
-        &quot;from&quot;:&quot;2017-01-01&quot;,&quot;to&quot;:&quot;2017-01-02&quot;},  
-        &quot;customerName&quot;:&quot;Jane Doe&quot;,  &quot;creditCardDetails&quot;: {    
-            &quot;cardNumber&quot;: &quot;0111-1111-1111-1111&quot;,    
-            &quot;cardOwner&quot;: &quot;John Doe&quot;,    
-            &quot;expiration&quot;: &quot;01/20&quot;,    
-            &quot;cvv&quot;: &quot;020&quot;  
+<p>&#x5F53;POST&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;<code>/bookings/</code>&#x65F6;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x6DFB;&#x52A0;<code>@Valid</code>&#x6CE8;&#x89E3;&#x5230;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;Spring&#x5C06;&#x4F1A;&#x4FDD;&#x8BC1;&#x8FDB;&#x5165;&#x7684;&#x8BA2;&#x5355;&#x8BF7;&#x6C42;&#x9996;&#x5148;&#x4F1A;&#x8FD0;&#x884C;&#x901A;&#x8FC7;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684;&#x9A8C;&#x8BC1;&#x89C4;&#x5219;&#x3002;</p><p>&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528;Postman&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x5982;&#x4E0B;&#x6240;&#x793A;POST&#x8BF7;&#x6C42;&#xFF1A;</p><pre><code class="lang-json">{  
+    <span class="hljs-string">&quot;roomId&quot;</span>:<span class="hljs-number">1</span>,  
+    <span class="hljs-string">&quot;dateRange&quot;</span>: {
+        <span class="hljs-string">&quot;from&quot;</span>:<span class="hljs-string">&quot;2017-01-01&quot;</span>,<span class="hljs-string">&quot;to&quot;</span>:<span class="hljs-string">&quot;2017-01-02&quot;</span>},  
+        <span class="hljs-string">&quot;customerName&quot;</span>:<span class="hljs-string">&quot;Jane Doe&quot;</span>,  <span class="hljs-string">&quot;creditCardDetails&quot;</span>: {    
+            <span class="hljs-string">&quot;cardNumber&quot;</span>: <span class="hljs-string">&quot;0111-1111-1111-1111&quot;</span>,    
+            <span class="hljs-string">&quot;cardOwner&quot;</span>: <span class="hljs-string">&quot;John Doe&quot;</span>,    
+            <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;01/20&quot;</span>,    
+            <span class="hljs-string">&quot;cvv&quot;</span>: <span class="hljs-string">&quot;020&quot;</span>  
         } 
     } 
 }</code></pre>
@@ -2589,7 +2589,7 @@ public class BookingsResource {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"验证订单","level":"1.15.4.1.2","depth":4,"next":{"title":"加密","level":"1.15.5","depth":2,"path":"chapter7/section5.md","ref":"chapter7/section5.md","articles":[{"title":"存储敏感数据","level":"1.15.5.1","depth":3,"path":"chapter7/section5_1.md","ref":"chapter7/section5_1.md","articles":[]}]},"previous":{"title":"正则表达式","level":"1.15.4.1.1","depth":4,"path":"chapter7/section4_1_1.md","ref":"chapter7/section4_1_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter7/section4_1_2.md","mtime":"2016-10-27T15:14:10.402Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-27T15:47:20.679Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"验证订单","level":"1.15.4.1.2","depth":4,"next":{"title":"加密","level":"1.15.5","depth":2,"path":"chapter7/section5.md","ref":"chapter7/section5.md","articles":[{"title":"存储敏感数据","level":"1.15.5.1","depth":3,"path":"chapter7/section5_1.md","ref":"chapter7/section5_1.md","articles":[]}]},"previous":{"title":"正则表达式","level":"1.15.4.1.1","depth":4,"path":"chapter7/section4_1_1.md","ref":"chapter7/section4_1_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter7/section4_1_2.md","mtime":"2016-10-31T08:09:13.714Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T08:19:58.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2597,6 +2597,10 @@ public class BookingsResource {
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

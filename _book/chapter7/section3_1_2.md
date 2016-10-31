@@ -3,7 +3,7 @@
 不想集中配置，非常类似在前面某部分讨论的，可以通过注解在在资源类中直接控制资源访问。Spring使用`org.springframework.security.access.prepost.PreAuthorize`提供了一个基于表达式的访问控制机制。
 让我们一起修改下在这章开头描述过的那个端点：
 
-```
+```java
 @RestController 
 @RequestMapping("/bookings") 
 public class BookingsResource {

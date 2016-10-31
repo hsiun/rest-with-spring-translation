@@ -15,7 +15,7 @@ public class WebApplication	{
 ```
 
 在你最拿手的IDE中运行这个类将启动一个内嵌的Tomcat实例，并且发布你的资源。服务将可以通过<http://localhost:8080>访问。作为示例，访问<http://localhost:8080/rooms/1>将返回下面内容：
-```
+```json
 {
 	"id": 1,
 	"name": "Room 1",

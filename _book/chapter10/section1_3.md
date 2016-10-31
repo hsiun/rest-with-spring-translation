@@ -4,4 +4,4 @@
 
 ![负载均衡](http://ofboy2upv.bkt.clouddn.com/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1.PNG)
 
-负载均衡解决方案的范围包括从企业级商业应用，如F5的BIG-IP（<https://f5.com/products/big-ip>），到开源的软件解决方法，如HAProxy（<http://www.haproxy.org>）。在
+负载均衡解决方案的范围包括从企业级商业应用，如F5的BIG-IP（<https://f5.com/products/big-ip>），到开源的软件解决方法，如HAProxy（<http://www.haproxy.org>）。

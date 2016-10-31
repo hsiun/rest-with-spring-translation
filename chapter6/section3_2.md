@@ -34,7 +34,7 @@ public class AvailabilityResource {
 如果没有声明这个参数为不必须，这个参数出现在了URL中，Spring将产生一个带有400HTTP状态码的错误响应。
 
 查询给定时间内可用的房间将返回下面数据：
-```
+```json
 {		
 	"status": "OK",		
 	"data":	[{				

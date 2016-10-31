@@ -2,7 +2,7 @@
 
 发送表单是在在Web中创建一个实体的传统方法，而且他也很容易用于创建新的RESTful资源。我们可以改变我们的方法成下面这样子：
 
-```
+```java
 @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE) 
 public ApiResponse addRoom(String name, String description, long roomCategoryId) {
 	Room room = createRoom(name, description, roomCategoryId);

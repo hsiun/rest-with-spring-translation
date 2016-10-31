@@ -1,8 +1,8 @@
 # 单元测试Spring控制器
 
-一旦我们使用注解将Java方法声明为RESTful端点，一般的单元测试就可以部署了。Java实际上的单元测试库是Junit。Junit是一个用于创建可重复测试的简单框架。下面的代码表明了我们可以如何测试RESTful端点：
+一旦我们使用注解将Java方法声明为RESTful端点，一般的单元测试就可以部署了。Java实际上的单元测试库是JUnit。JUnit是一个用于创建可重复测试的简单框架。下面的代码表明了我们可以如何测试RESTful端点：
 
-```
+```java
 public class AvailabilityResourceTest {  
     @Test  
     public void testGetAvailability() throws Exception {    

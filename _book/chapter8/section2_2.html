@@ -2526,7 +2526,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4F7F;&#x7528;mocking&#x5E93;&#x5B9E;&#x73B0;stubbing">&#x4F7F;&#x7528;mocking&#x5E93;&#x5B9E;&#x73B0;stubbing</h1>
+                                <h1 id="&#x4F7F;&#x7528;mocking&#x5E93;&#x5B9E;&#x73B0;stubbing">&#x4F7F;&#x7528;mocking&#x5E93;&#x5B9E;&#x73B0;stubbing</h1><p>&#x5F53;&#x63D0;&#x5230;Java&#x4E2D;mocking&#x5E93;&#x7684;&#x65F6;&#x5019;&#x6709;&#x597D;&#x51E0;&#x4E2A;&#x9009;&#x9879;&#x3002;&#x5982;JMock&#xFF08;<a href="http://www.jmock.org&#xFF09;&#x6216;&#x8005;&#x662F;EasyMock&#xFF08;http://easymock.org&#xFF09;&#x3002;**" target="_blank">http://www.jmock.org&#xFF09;&#x6216;&#x8005;&#x662F;EasyMock&#xFF08;http://easymock.org&#xFF09;&#x3002;**</a> Mockito **&#x662F;&#x5176;&#x4E2D;&#x6700;&#x6D41;&#x884C;&#x7684;&#x4E4B;&#x4E00;&#x3002;Mockito&#x662F;&#x4E00;&#x4E2A;mocking&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x5199;&#x51FA;&#x5F88;&#x7EAF;&#x7CB9;&#x7684;&#x6D4B;&#x8BD5;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;API&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x4F9D;&#x8D56;&#x5230;&#x5B83;&#x4EEC;&#x9879;&#x76EE;&#x63CF;&#x8FF0;&#x5668;&#x4E2D;&#x6765;&#x6DFB;&#x52A0;Mockito&#x5230;&#x5B83;&#x4EEC;&#x7684;Maven&#x9879;&#x76EE;&#x4E2D;&#x3002;</p><pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mockito<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mockito-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.9.5<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre>
+<p>&#x4E3A;&#x4E86;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x4F7F;&#x7528;Mockito&#xFF0C;&#x770B;&#x4E00;&#x773C;&#x4E0B;&#x9762;&#x7684;&#x6D4B;&#x8BD5;&#xFF1A;</p><pre><code class="lang-java"><span class="hljs-meta">@Test</span> 
+<span class="hljs-function">publi <span class="hljs-keyword">void</span> <span class="hljs-title">testUpdateRoom</span><span class="hljs-params">()</span> </span>{  
+    InventoryService service = mock(InventoryService.class);  
+    RoomCategory category = ... <span class="hljs-comment">// skipped for clarity  </span>
+    Room room = ... <span class="hljs-comment">// skipped for clarity  </span>
+    when(service.getRoom(<span class="hljs-number">1</span>)).thenReturn(room);  
+    when(service.getRoomCategory(anyLong()))  
+        .thenReturn(category);  
+    Room updatedRoom = ... <span class="hljs-comment">// skipped for clarity  </span>
+    updatedRoom.setDescription(<span class="hljs-string">&quot;It&apos;s an awesome room!&quot;</span>);  
+    ApiResponse response = resource.updateRoom(<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> RoomDTO(updatedRoom));
+    assertEquals(Status.OK, response.getStatus());  
+    assertEquals(<span class="hljs-string">&quot;It&apos;s an awesome room!&quot;</span>, ((RoomDTO) 
+        response.getData()).getDescription()); } </code></pre>
+<p>&#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5;&#x9A8C;&#x8BC1;&#x5982;&#x679C;&#x53EF;&#x80FD;&#x7684;&#x8BDD;&#x66F4;&#x65B0;&#x5B58;&#x5728;&#x7684;&#x623F;&#x95F4;&#x3002;&#x4EE3;&#x66FF;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;<code>InventoryService</code>&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>mock(InventoryService.class)</code>&#x4F7F;&#x7528;Mockito&#x6765;&#x521B;&#x5EFA;mock&#x5B9E;&#x73B0;&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#x662F;&#x5F53;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6307;&#x793A;&#x6211;&#x4EEC;&#x7684;mock&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x623F;&#x95F4;&#x548C;&#x623F;&#x95F4;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x8FD9;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>when(&#x2026;).thenReturn(&#x2026;)</code>&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x884C;&#x4E3A;&#x5230;&#x6211;&#x4EEC;&#x7684;mock&#x3002;&#x4E3E;&#x4F8B;&#xFF0C;&#x5F53;<code>InventoryService.getRoom()</code>&#x88AB;&#x8C03;&#x7528;&#x6765;&#x67E5;&#x8BE2;ID&#x4E3A;1&#x7684;&#x623F;&#x95F4;&#x662F;<code>when(service.getRoom(1)).thenReturn(room)</code>&#x5C06;&#x4F7F;&#x6211;&#x4EEC;&#x7684;mock&#x670D;&#x52A1;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x623F;&#x95F4;&#x3002;</p>
                                 
                                 </section>
                             
@@ -2569,7 +2589,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"使用mocking库实现stubbing","level":"1.16.2.2","depth":3,"next":{"title":"Mockito和Spring","level":"1.16.2.2.1","depth":4,"path":"chapter8/section2_2_1.md","ref":"chapter8/section2_2_1.md","articles":[]},"previous":{"title":"简单黑盒测试","level":"1.16.2.1","depth":3,"path":"chapter8/section2_1.md","ref":"chapter8/section2_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section2_2.md","mtime":"2016-10-20T02:43:46.677Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-27T15:47:20.679Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用mocking库实现stubbing","level":"1.16.2.2","depth":3,"next":{"title":"Mockito和Spring","level":"1.16.2.2.1","depth":4,"path":"chapter8/section2_2_1.md","ref":"chapter8/section2_2_1.md","articles":[]},"previous":{"title":"简单黑盒测试","level":"1.16.2.1","depth":3,"path":"chapter8/section2_1.md","ref":"chapter8/section2_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/section2_2.md","mtime":"2016-10-31T05:15:03.291Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T08:19:58.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2577,6 +2597,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

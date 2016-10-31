@@ -22,7 +22,7 @@
 关于使用Maven模块的更多信息可以在<https://maven.apache.org/guides/mini/guide-multiple-modules.html>找到文档参考。
 
 因此我们的父POM看起来将是这样的：
-```
+```xml
 <project... //出于可读性的目的省略
 	<modelVersion>4.0.0</modelVersion>
 

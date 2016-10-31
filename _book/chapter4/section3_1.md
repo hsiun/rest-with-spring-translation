@@ -1,7 +1,7 @@
 # HATEOAS
 
 RESTful提供了一种方法用于服务器的消费者进行自我发现。让我们考虑下面对RESTful端点的响应：
-```
+```json
 {
 	"id": 1,
 	"category": "http://myservice.com/categories/33"

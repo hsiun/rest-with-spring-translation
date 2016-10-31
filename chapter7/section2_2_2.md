@@ -2,7 +2,7 @@
 
 让我们一起看看如何设置使得RESTful Web服务支持基础鉴权。首先，我们需要添加几个新的依赖到我们的项目中：
 
-```
+```xml
 <dependency>  
     <groupId>org.springframework.security</groupId>  
     <artifactId>spring-security-config</artifactId>  

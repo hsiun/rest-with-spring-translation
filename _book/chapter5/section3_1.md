@@ -2,7 +2,7 @@
 
 下面的方法提供了修改房间必要的端点。
 
-```
+```java
 @RequestMapping(value = "/{roomId}", method = RequestMethod.PUT) 
 public ApiResponse updateRoom(@PathVariable long roomId, @RequestBody RoomDTO updatedRoom)	{		
 	try	{				

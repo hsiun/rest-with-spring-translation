@@ -18,7 +18,7 @@ Authorization: Digest username="rest", realm="My Realm", nonce="MTQzNDUzMjM0OTk2
 
 为了支持摘要验证，让我们修改我们的`SecurityConfig`类：
 
-```
+```java
 @EnableWebSecurity public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override  
 	protected void configure(HttpSecurity http) throws Exception {    

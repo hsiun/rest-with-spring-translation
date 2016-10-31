@@ -6,7 +6,7 @@
 Maven的主仓库被称之为中央仓库，可以在<http://maven.org>搜索到。
 
 为了声明依赖，前面章节展示的简单POM文件可以修改成下面格式：
-```
+```xml
 // 为了方便阅读，省略上面的内容
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>

@@ -10,7 +10,7 @@
 
 * *Ehcache*：如前所述，Ehcache提供了集群缓存能力。对于中小型系统扩展部署它是非常流行的解决方案。
 
-* *Riak*（http://basho.com/products/#riak）：这是一个分布式的NoSQL键值对数据仓库，提供高可用和容错。数据可以被存储于内存，硬盘，或者同时存储于两者。Riak是用Erlan编写的。为了保证数据强一致性，Riak牺牲了一定的性能。
+* *Riak*（<http://basho.com/products/#riak>）：这是一个分布式的NoSQL键值对数据仓库，提供高可用和容错。数据可以被存储于内存，硬盘，或者同时存储于两者。Riak是用Erlan编写的。为了保证数据强一致性，Riak牺牲了一定的性能。
 
 * *Aerospike*（<http://www.aerospike.com>）：这是一个开源，实时NoSQL数据库和键值仓库。这个快速优化，驻于内存的缓存解决方案是用C写的，在性能和花费之间提供了很好的平衡。
 

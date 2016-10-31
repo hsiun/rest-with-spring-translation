@@ -4,7 +4,7 @@
 
 举个例子，资源更新请求可以由设置了自定义头部（如，X-HTTP-Method-Override）为PUT的POST请求来处理，重写设置表明我们通过POST请求模拟PUT请求。下面的方法将处理这种方案：
 
-```
+```java
 @RequestMapping(value = "/{roomId}", method = RequestMethod.POST, headers = {"X-HTTP-Method-Override=PUT"}) 
 public ApiResponse updateRoomAsPost(@PathVariable("roomId") long id, @RequestBody RoomDTO updatedRoom) {		
 	return updateRoom(id, updatedRoom); 

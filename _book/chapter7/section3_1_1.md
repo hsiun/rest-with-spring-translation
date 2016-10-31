@@ -15,7 +15,7 @@
 
 在这个新版本中，我们指示Spring只允许管理员访问读取订单。所有其他端点接收来自使用任何角色鉴权用户的请求。我们可以通过修改我们的类成下面这样来实现这个：
 
-```
+```java
 @EnableWebSecurity public class SecurityConfig extends WebSecurityConfigurerAdapter {  
 	@Autowired  
 	public void configureGlobal(AuthenticationManagerBuilder auth)  throws Exception {   

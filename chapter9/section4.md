@@ -3,7 +3,7 @@
 第三章，_第一个端点_，接触到了定义一个包含错误代码和错误描述的固定响应格式。推测客户端会定义一个异常来封装调用失败的原因。我们可以这样做，因此，定义了下面的异常类：
 
 
-```
+```java
 public class ClientException extends RuntimeException {
     private final int errorCode;  
     private final String errorDescription;

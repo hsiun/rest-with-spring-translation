@@ -3,7 +3,7 @@
 Spring Web MVC模式提供了传统** 模型 视图 控制器 **模式的实现。而REST不要求使用任何特定的模式，使用MVC模式非常自然的符合了RESTful的资源和模型通过控制器发布的特点。视图在我们这里将会是一个JSON表示的模型。
 
 不用担心太多，让我们看一眼：
-```
+```java
 @RestController @RequestMapping("/rooms") 
 public class RoomsResource	{
 	private final InventoryService inventoryService;

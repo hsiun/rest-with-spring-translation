@@ -2,7 +2,7 @@
 
 我们简单管理系统的Inventory部分处理的是房间。在第三章，_第一个端点_，我们建立了一个端点访问房间。让我们一起看下如何定义一个端点创建新的资源：
 
-```
+```java
 @RestController 
 @RequestMapping("/rooms") 
 public class RoomsResource {
@@ -20,7 +20,7 @@ public class RoomsResource {
 @RequestMapping没有指明路径值的话，等价于使用"/"。我们对传入的新房间使用`@RequestBody`注解。这个注解指示Spring将进入的web请求体映射到方法参数。Jackson在这里被用于转换JSON请求体到Java对象。
 
 关于我们的新方法，使用下面JSON体POST请求<http://localhoost:8080/rooms>的结果是将创建一间新的房间。
-```
+```json
 {		
 	name: "Cool Room",		
 	description: "A room that is very cool indeed",	
@@ -30,7 +30,7 @@ public class RoomsResource {
 
 我们新的方法将返回这个新建的房间：
 
-```
+```json
 {		
 	"status":"OK",		
 	"data":{				

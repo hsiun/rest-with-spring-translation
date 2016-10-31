@@ -2,7 +2,7 @@
 
 我们构建的简单资源管理系统，我们使用Java接口来实现RESTful层和服务实现的解耦。除了有助于代码库的结构和阻止紧耦合，这个过程也有助于单元测试。确实，当我们测试我们应用的Web侧时，替代使用具体服务实现可以通过模拟来实现。举例，请看下面的单元测试代码：
 
-```
+```java
 public class RoomsResourceTest {  
     @Test  
     public void testGetRoom() throws Exception {    

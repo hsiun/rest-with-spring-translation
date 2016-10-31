@@ -36,7 +36,7 @@ JPA不在本书范围之内。关于它的信息可以在<http://en.wikipedia.or
 另外，目录和房间之间一对多关系是通过使用`@javax。persistence.ManyToOne`注解表明的。
 
 `Inventory`服务提供对房间和目录的访问。这部分提供了几个可用的操作。然而，我们本章只对其中一个操作感兴趣。因此，让我们考虑下面的Java接口：
-```
+```java
 public interface InvertoryService {
 	public Room getRoom(long roomId);
 

@@ -20,7 +20,7 @@ public class WebApplication {
 ### 技巧
 添加如下Maven依赖来访问`org.springframework.boot.SpringApplication`:
 
-```
+```xml
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-web</artifactId>

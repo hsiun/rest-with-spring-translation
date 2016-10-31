@@ -10,7 +10,7 @@ public List<RoomDTO> getRoomsInCategory(@RequestParam("categoryId") long categor
 ```
 
 对如<http://localhost:8080/rooms?categoryId=1>URL的请求，将会由这个方法处理，并且方法的属性`categoryId`将会被设置为1。这个方法将以JSON格式返回一列通过给定目录查到的房间，如下所示：
-```
+```json
 [		
 	{				
 		"id": 1,				

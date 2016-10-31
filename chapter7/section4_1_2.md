@@ -2,7 +2,7 @@
 
 我们的``类应该先验证进入系统的订单请求，然后再来处理他们。一起来添加下面的端点：
 
-```
+```java
 @RestController @RequestMapping("/bookings") 
 public class BookingsResource {  
     @RequestMapping(method = RequestMethod.POST)  
@@ -17,7 +17,7 @@ public class BookingsResource {
 
 例如，使用Postman，我们可以发送如下所示POST请求：
 
-```
+```json
 {  
 	"roomId":1,  
 	"dateRange": {

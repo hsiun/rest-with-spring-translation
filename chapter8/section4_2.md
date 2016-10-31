@@ -2,7 +2,7 @@
 
 通过使用方便的注解Spring Boot对继承测试提供了很好的支持，正如下面的代码片段所展示的：
 
-```
+```java
 @RunWith(SpringJUnit4ClassRunner.class) 
 @SpringApplicationConfiguration(classes = WebApplication.class) 
 @WebAppConfiguration 

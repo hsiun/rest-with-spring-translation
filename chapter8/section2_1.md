@@ -2,7 +2,7 @@
 
 为了提供必要的行为，我可以简答创建一个Inventory服务实现：
 
-```
+```java
 InventoryService inventoryService = new InventoryService() {  
 	@Override  
 	public Room getRoom(long roomId) {    

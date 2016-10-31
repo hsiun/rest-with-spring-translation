@@ -2,7 +2,7 @@
 
 在之前的例子中，我们对`Rooms`产生了不同的表示。我应该因此考虑下通过MIME类型版本来管理版本。下面的示例代码片段展示了我们可以如何通过Spring Web来实现：
 
-```
+```java
 @RequestMapping(value = "/{roomId}", method = RequestMethod.GET) 
 public RoomDTO getRoom(@PathVariable("roomId") long id) 
 {  

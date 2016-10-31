@@ -15,7 +15,7 @@ public interface InventoryServiceClient {
 
 下一章将讨论为何将我们客户端声明为接口是一个好主意。
 现在我们可以开始实现我们的客户端了：
-```
+```java
 public class RemoteInventoryServiceClient implements InventoryServiceClient {
     private final String serviceUrl;    
     private final RestTemplate template;

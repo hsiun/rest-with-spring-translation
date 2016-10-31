@@ -10,7 +10,7 @@
 
 * 面向信息的中间件（MOM）：这是一项基础设施，支持在分布式系统间发送和接收信息，如下面截图所示：
 ![MOM](http://ofboy2upv.bkt.clouddn.com/MoM.PNG)
-RabbitMQ（https://www.rabbitmq.com）和Apache ActiveMQ（(http://activemq.apache.org）是MOM非常好的示例。
+RabbitMQ（<https://www.rabbitmq.com>）和Apache ActiveMQ（<http://activemq.apache.org>）是MOM非常好的示例。
 
 *Asynchronous RESTful API：通过使用`@org.springframework.scheduling.annotation.Async`注解端点，并返回一个`java.util.concurrent.Future`包，这样就可能构建一个异步的RESTful操作。
 

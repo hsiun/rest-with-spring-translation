@@ -6,7 +6,7 @@
 
 非常赞的是，Maven支持将一个模块打包成WAR（Web Application Archive）。然而，它并不会将代码表示成一个artifact。要这样做，我们的服务模块必须包含如下配置：
 
-```
+```xml
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<parent>

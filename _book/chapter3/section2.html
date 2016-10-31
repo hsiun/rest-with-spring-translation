@@ -2526,17 +2526,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rest&#x548C;mvc&#x6A21;&#x5F0F;">REST&#x548C;MVC&#x6A21;&#x5F0F;</h1><p>Spring Web MVC&#x6A21;&#x5F0F;&#x63D0;&#x4F9B;&#x4E86;&#x4F20;&#x7EDF;<strong> &#x6A21;&#x578B; &#x89C6;&#x56FE; &#x63A7;&#x5236;&#x5668; </strong>&#x6A21;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x800C;REST&#x4E0D;&#x8981;&#x6C42;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7279;&#x5B9A;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;MVC&#x6A21;&#x5F0F;&#x975E;&#x5E38;&#x81EA;&#x7136;&#x7684;&#x7B26;&#x5408;&#x4E86;RESTful&#x7684;&#x8D44;&#x6E90;&#x548C;&#x6A21;&#x578B;&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x5668;&#x53D1;&#x5E03;&#x7684;&#x7279;&#x70B9;&#x3002;&#x89C6;&#x56FE;&#x5728;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;JSON&#x8868;&#x793A;&#x7684;&#x6A21;&#x578B;&#x3002;</p><p>&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x592A;&#x591A;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x773C;&#xFF1A;</p><pre><code>@RestController @RequestMapping(&quot;/rooms&quot;) 
-public class RoomsResource    {
-    private final InventoryService inventoryService;
-    public RoomsResource(InventoryService inventoryService)    {                
-        this.inventoryService = inventoryService;        
+                                <h1 id="rest&#x548C;mvc&#x6A21;&#x5F0F;">REST&#x548C;MVC&#x6A21;&#x5F0F;</h1><p>Spring Web MVC&#x6A21;&#x5F0F;&#x63D0;&#x4F9B;&#x4E86;&#x4F20;&#x7EDF;<strong> &#x6A21;&#x578B; &#x89C6;&#x56FE; &#x63A7;&#x5236;&#x5668; </strong>&#x6A21;&#x5F0F;&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x800C;REST&#x4E0D;&#x8981;&#x6C42;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x7279;&#x5B9A;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;MVC&#x6A21;&#x5F0F;&#x975E;&#x5E38;&#x81EA;&#x7136;&#x7684;&#x7B26;&#x5408;&#x4E86;RESTful&#x7684;&#x8D44;&#x6E90;&#x548C;&#x6A21;&#x578B;&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x5668;&#x53D1;&#x5E03;&#x7684;&#x7279;&#x70B9;&#x3002;&#x89C6;&#x56FE;&#x5728;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;JSON&#x8868;&#x793A;&#x7684;&#x6A21;&#x578B;&#x3002;</p><p>&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x592A;&#x591A;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x773C;&#xFF1A;</p><pre><code class="lang-java"><span class="hljs-meta">@RestController</span> <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/rooms&quot;</span>) 
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RoomsResource</span>    </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> InventoryService inventoryService;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RoomsResource</span><span class="hljs-params">(InventoryService inventoryService)</span>    </span>{                
+        <span class="hljs-keyword">this</span>.inventoryService = inventoryService;        
     }
-    @RequestMapping(value = &quot;/{roomId}&quot;, method = RequestMethod.GET)        
-    public RoomDTO getRoom(@PathVariable(&quot;roomId&quot;) String roomId)    {                
+    <span class="hljs-meta">@RequestMapping</span>(value = <span class="hljs-string">&quot;/{roomId}&quot;</span>, method = RequestMethod.GET)        
+    <span class="hljs-function"><span class="hljs-keyword">public</span> RoomDTO <span class="hljs-title">getRoom</span><span class="hljs-params">(@PathVariable(<span class="hljs-string">&quot;roomId&quot;</span>)</span> String roomId)    </span>{                
         RoomDTO room = ...                
-        //    omitted    for    sake of clarity                
-        return    room;        
+        <span class="hljs-comment">//    omitted    for    sake of clarity                </span>
+        <span class="hljs-keyword">return</span>    room;        
     } 
 }</code></pre>
 <p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>@org.springframework.web.bind.annotation.RestController</code>&#xFF0C;&#x6211;&#x4EEC;&#x544A;&#x8BC9;Spring <code>RoomResource</code>&#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x3002;</p><h3 id="&#x6280;&#x5DE7;">&#x6280;&#x5DE7;</h3><p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x4E5F;&#x8BB8;&#x88AB;&#x671F;&#x671B;&#x79F0;&#x4E3A;<code>RoomController</code>&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;RESTful&#x67B6;&#x6784;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x5173;&#x952E;&#x6982;&#x5FF5;&#x662F;&#x5173;&#x4E8E;&#x8D44;&#x6E90;&#x89E3;&#x6790;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F7F;&#x7528;<em>Resource</em>&#x540E;&#x7F00;&#x66F4;&#x52A0;&#x7B26;&#x5408;REST&#x539F;&#x5219;&#x3002;</p><p>&#x5728;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x4E2D;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5176;&#x4ED6;&#x6CE8;&#x89E3;&#x662F;
@@ -2585,7 +2585,7 @@ public class RoomsResource    {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REST和MVC模式","level":"1.11.2","depth":2,"next":{"title":"请求映射","level":"1.11.2.1","depth":3,"path":"chapter3/section2_1.md","ref":"chapter3/section2_1.md","articles":[]},"previous":{"title":"Inventory服务","level":"1.11.1","depth":2,"path":"chapter3/section1.md","ref":"chapter3/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section2.md","mtime":"2016-10-27T11:08:50.786Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-27T15:47:20.679Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"REST和MVC模式","level":"1.11.2","depth":2,"next":{"title":"请求映射","level":"1.11.2.1","depth":3,"path":"chapter3/section2_1.md","ref":"chapter3/section2_1.md","articles":[]},"previous":{"title":"Inventory服务","level":"1.11.1","depth":2,"path":"chapter3/section1.md","ref":"chapter3/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section2.md","mtime":"2016-10-31T08:02:04.309Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-31T08:19:58.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2593,6 +2593,10 @@ public class RoomsResource    {
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
